@@ -1,5 +1,8 @@
 package ch.hearc.ig.odi.moviemanager.business;
 
+import ch.hearc.ig.odi.moviemanager.exception.InvalidParameterException;
+import ch.hearc.ig.odi.moviemanager.exception.NullParameterException;
+import ch.hearc.ig.odi.moviemanager.exception.UniqueException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +10,7 @@ import java.util.List;
  * @author maxime.beck
  */
 public class Person {
+
     private Long id;
     private String firstName;
     private String lastName;
@@ -24,7 +28,7 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
         this.movies = movies;
-    }   
+    }
 
     public Long getId() {
         return id;
@@ -48,7 +52,7 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }  
+    }
 
     public List<Movie> getMovies() {
         return movies;
@@ -57,15 +61,25 @@ public class Person {
     public void setMovies(List<Movie> movies) {
         this.movies = movies;
     }
-    
+
     // Méthodes
-    public void addMovie(Movie movie) {
-        // TODO implement
-        throw new UnsupportedOperationException();
+    public void addMovie(Movie movie) throws NullParameterException, UniqueException {
+        if (movie == null)
+            throw new NullParameterException();
+        
+        if (this.movies.contains(movie) || movie.getPersons().contains(this))
+            throw new UniqueException();
+        
+        this.movies.add(movie);
     }
-    
-    public void removeMovie(Movie movie) {
-        // TODO implement
-        throw new UnsupportedOperationException();
+
+    public void removeMovie(Movie movie) throws NullParameterException, InvalidParameterException {
+        if (movie == null)
+            throw new NullParameterException();
+
+        if (!this.movies.contains(movie) || !movie.getPersons().contains(this))
+            throw new InvalidParameterException();
+            
+        this.movies.remove(movie);
     }
 }
