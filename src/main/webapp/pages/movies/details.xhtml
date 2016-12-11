@@ -31,7 +31,7 @@
                         <td>Robert Zemeckis</td>
                     </tr>  
                 </table>
-                <h:button value="#{msg['button.edit']}"/>
+                <h:button value="#{msg['button.edit']}" outcome="editMovie" />
 
                 <h1>#{msg['listPeopleMovies.label']}</h1>
                 <h:dataTable >
@@ -45,7 +45,7 @@
                         <f:facet name="header">#{msg['listPeople.lastName']}</f:facet>
                     </h:column>
                 </h:dataTable>
-                <h:button value="#{msg['button.returnHome']}"/>
+                <h:button value="#{msg['button.returnHome']}" outcome="returnHome" />
             </ui:define>
 
             <ui:define name="bottom">

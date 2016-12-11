@@ -42,6 +42,10 @@
             <to-view-id>/pages/people/edit.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
+            <from-outcome>createMovie</from-outcome>
+            <to-view-id>/pages/movies/create.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
             <from-outcome>returnHome</from-outcome>
             <to-view-id>/pages/index.xhtml</to-view-id>
         </navigation-case>
@@ -65,6 +69,26 @@
     
     <navigation-rule>
         <from-view-id>/pages/movies/details.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/pages/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>editMovie</from-outcome>
+            <to-view-id>/pages/movies/edit.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/pages/movies/create.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/pages/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/pages/movies/edit.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>returnHome</from-outcome>
             <to-view-id>/pages/index.xhtml</to-view-id>

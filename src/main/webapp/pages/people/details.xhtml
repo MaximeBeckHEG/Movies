@@ -24,11 +24,11 @@
                     </tr>
                     <tr>
                         <td>#{msg['listPeople.firstName']} :</td>
-                        <td>Forrest Gump</td>
+                        <td>Maxime</td>
                     </tr>  
                     <tr>
                         <td>#{msg['listPeople.lastName']} :</td>
-                        <td>Robert Zemeckis</td>
+                        <td>Beck</td>
                     </tr>  
                 </table>
                 <h:button value="#{msg['button.edit']}" outcome="editPeople" />
@@ -49,9 +49,9 @@
                     </h:column>
                 </h:dataTable>
                 <p>
-                    <span>#{msg['listMovies.add']} : </span>
-                    <h:selectManyMenu></h:selectManyMenu>
-                    <h:button value="#{msg['button.add']}"/>
+                    <span>#{msg['listPeopleMovies.label']} : </span>
+                    <!--<h:selectManyMenu></h:selectManyMenu>-->
+                    <h:button value="#{msg['button.add']}" outcome="createMovie"/>
                 </p>
                 <h:button value="#{msg['button.returnHome']}" outcome="returnHome" />
             </ui:define>
