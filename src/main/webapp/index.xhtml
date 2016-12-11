@@ -1,12 +1,60 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
     <h:head>
-        <title>Facelet Title</title>
+        <title>#{msg['page.home']}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <ui:composition template="resources/template/mainTemplate.xhtml">
+
+            <ui:define name="top">
+                <h:outputText value="#{msg['page.home']}"/>
+            </ui:define>
+
+            <ui:define name="content">
+                <h1>#{msg['listPeople.label']}</h1>
+                <h:dataTable >
+                    <h:column>
+                        <f:facet name="header">#{msg['listPeople.id']}</f:facet>                        
+                    </h:column>            
+                    <h:column>
+                        <f:facet name="header">#{msg['listPeople.firstName']}</f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{msg['listPeople.lastName']}</f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{msg['listPeople.nbMovies']}</f:facet>
+                    </h:column>
+                </h:dataTable>
+                <h:button value="#{msg['button.add']}"/>
+                
+                <h1>#{msg['listMovies.label']}</h1>
+                <h:dataTable >
+                    <h:column>
+                        <f:facet name="header">#{msg['listMovies.id']}</f:facet>                        
+                    </h:column>            
+                    <h:column>
+                        <f:facet name="header">#{msg['listMovies.name']}</f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{msg['listMovies.producer']}</f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">#{msg['listMovies.nbPeople']}</f:facet>
+                    </h:column>
+                </h:dataTable>
+                <h:button value="#{msg['button.add']}"/>
+            </ui:define>
+
+            <ui:define name="bottom">
+                <h:outputText value="#{msg['footer']}"/>
+            </ui:define>
+        </ui:composition>
     </h:body>
 </html>
-
