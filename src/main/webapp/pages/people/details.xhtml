@@ -18,16 +18,18 @@
 
             <ui:define name="content">
                 <table>
-                    <td>
-                        <tr>#{msg['listPeople.id']} :</tr>
-                        <tr>#{msg['listPeople.firstName']} :</tr>
-                        <tr>#{msg['listPeople.lastName']} :</tr>
-                    </td>
-                    <td>
-                        <tr>1</tr>
-                        <tr>Lara</tr>
-                        <tr>Clette</tr>
-                    </td>        
+                    <tr>
+                        <td>#{msg['listPeople.id']} :</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>#{msg['listPeople.firstName']} :</td>
+                        <td>Forrest Gump</td>
+                    </tr>  
+                    <tr>
+                        <td>#{msg['listPeople.lastName']} :</td>
+                        <td>Robert Zemeckis</td>
+                    </tr>  
                 </table>
                 <h:button value="#{msg['button.edit']}" outcome="editPeople" />
 

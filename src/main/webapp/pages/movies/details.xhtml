@@ -18,16 +18,18 @@
 
             <ui:define name="content">
                 <table>
-                    <td>
-                        <tr>#{msg['listMovies.id']} :</tr>
-                        <tr>#{msg['listMovies.name']} :</tr>
-                        <tr>#{msg['listMovies.producer']} :</tr>
-                    </td>
-                    <td>
-                        <tr>1</tr>
-                        <tr>Forrest Gump</tr>
-                        <tr>Robert Zemeckis</tr>
-                    </td>        
+                    <tr>
+                        <td>#{msg['listMovies.id']} :</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>#{msg['listMovies.name']} :</td>
+                        <td>Forrest Gump</td>
+                    </tr>  
+                    <tr>
+                        <td>#{msg['listMovies.producer']} :</td>
+                        <td>Robert Zemeckis</td>
+                    </tr>  
                 </table>
                 <h:button value="#{msg['button.edit']}"/>
 

@@ -17,22 +17,24 @@
             </ui:define>
 
             <ui:define name="content">
-                <h:outputLabel for="id">#{msg['listPeople.id']} :</h:outputLabel>
-                <h:inputText id="id" label="#{msg['listPeople.id']}" size="20" />
+                <h:form>
+                    <h:outputLabel for="id">#{msg['listPeople.id']} :</h:outputLabel>
+                    <h:inputText id="id" label="#{msg['listPeople.id']}" size="20" />
+                    <br />
+
+                    <h:outputLabel for="firstName">#{msg['listPeople.firstName']} :</h:outputLabel>
+                    <h:inputText id="firstName" label="#{msg['listPeople.firstName']}"
+                                 size="20" required="true" requiredMessage="#{msg['validation.people.firstName']}" />
+                    <h:message id="firstNameMessage" for="firstName" errorClass="error" />
+                    <br />
+
+                    <h:outputLabel for="lastName">#{msg['listPeople.lastName']} :</h:outputLabel>
+                    <h:inputText id="lastName" label="#{msg['listPeople.lastName']}"
+                                 size="20" required="true" requiredMessage="#{msg['validation.people.lastName']}" />
+                    <h:message id="lastNameMessage" for="lastName" errorClass="error" />
+                    <br />
+                </h:form>
                 
-                <h:outputLabel for="firstName">#{msg['listPeople.firstName']} :</h:outputLabel>
-                <h:inputText id="firstName" label="#{msg['listPeople.firstName']}"
-                             size="20" required="true" requiredMessage="#{msg['validation.people.firstName']}" />
-                <h:message id="firstNameMessage" for="firstName" errorClass="error" />
-
-                <h:outputLabel for="lastName">#{msg['listPeople.lastName']} :</h:outputLabel>
-                <h:inputText id="lastName" label="#{msg['listPeople.lastName']}"
-                             size="20" required="true" requiredMessage="#{msg['validation.people.lastName']}" />
-                <h:message id="lastNameMessage" for="lastName" errorClass="error" />
-
-                <h:outputText value="#{msg['listPeople.firstName']} : "/>
-                <h:outputText value="#{msg['listPeople.lastName']} : "/>
-
                 <h:button value="#{msg['button.reinit']}"/>
                 <h:button value="#{msg['button.valid']}"/>
                 <h:button value="#{msg['button.cancel']}"/>
