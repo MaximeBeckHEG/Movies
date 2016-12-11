@@ -14,4 +14,12 @@
             <supported-locale>en</supported-locale>
         </locale-config>
     </application>
+    
+    <navigation-rule>
+        <from-view-id>/pages/index.xhtml</from-view-id>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/pages/people/moviesList.xhtml</from-view-id>      
+    </navigation-rule>
 </faces-config>
