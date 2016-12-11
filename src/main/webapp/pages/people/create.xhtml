@@ -30,9 +30,9 @@
                 <h:outputText value="#{msg['listPeople.firstName']} : "/>
                 <h:outputText value="#{msg['listPeople.lastName']} : "/>
 
-                <h:button value="#{msg['button.reinit']}"/>
-                <h:button value="#{msg['button.valid']}"/>
-                <h:button value="#{msg['button.cancel']}"/>
+                <h:button value="#{msg['button.reinit']}" outcome="returnHome" />
+                <h:button value="#{msg['button.valid']}" outcome="returnHome" />
+                <h:button value="#{msg['button.cancel']}" outcome="returnHome" />
             </ui:define>
 
             <ui:define name="bottom">

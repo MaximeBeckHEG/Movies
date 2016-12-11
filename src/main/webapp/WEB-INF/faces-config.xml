@@ -17,9 +17,57 @@
     
     <navigation-rule>
         <from-view-id>/pages/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>peopleDetails</from-outcome>
+            <to-view-id>/pages/people/details.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>createPeople</from-outcome>
+            <to-view-id>/pages/people/create.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>moviesDetails</from-outcome>
+            <to-view-id>/pages/movies/details.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>createMovie</from-outcome>
+            <to-view-id>/pages/movies/create.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     
     <navigation-rule>
         <from-view-id>/pages/people/details.xhtml</from-view-id>      
+        <navigation-case>
+            <from-outcome>editPeople</from-outcome>
+            <to-view-id>/pages/people/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/pages/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/pages/people/create.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/pages/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/pages/people/edit.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/pages/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/pages/movies/details.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>returnHome</from-outcome>
+            <to-view-id>/pages/index.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
 </faces-config>
