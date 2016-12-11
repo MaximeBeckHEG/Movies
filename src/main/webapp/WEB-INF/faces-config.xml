@@ -20,6 +20,6 @@
     </navigation-rule>
     
     <navigation-rule>
-        <from-view-id>/pages/people/moviesList.xhtml</from-view-id>      
+        <from-view-id>/pages/people/details.xhtml</from-view-id>      
     </navigation-rule>
 </faces-config>
